@@ -1,0 +1,36 @@
+.horizontal-tab-wrapper .tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .horizontal-tab-wrapper .tab-buttons .tab-button,
+  .horizontal-tab-wrapper .tab-content .inner-tab-button {
+    background-color: #0072c6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .horizontal-tab-wrapper .tab-buttons .tab-button:hover,
+  .horizontal-tab-wrapper .tab-content .inner-tab-button:hover {
+    background-color: #005a9e;
+  }
+  
+  .horizontal-tab-wrapper .tab-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+  }
+  
+  .horizontal-tab-wrapper .tab-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
