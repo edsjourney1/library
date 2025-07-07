@@ -1,5 +1,6 @@
+/* Style for tab buttons */
 .tab-two-button {
-    background-color: #0078d4;
+    background-color: #21a5e7;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -7,15 +8,37 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   
   .tab-two-button:hover {
     background-color: #005a9e;
   }
   
-  .tab-two-table.block > div {
+  /* Make the first table (buttons) align horizontally */
+  #tab-two-table-buttons {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    gap: 10px;
     margin-bottom: 10px;
+  }
+  
+  /* Ensure each row inside the first table behaves correctly */
+  #tab-two-table-buttons > div {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style the second table (tab content) */
+  #tab-two-table-content {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Optional: Add spacing between tab section and other content */
+  .tab-two-table-wrapper {
+    margin-bottom: 20px;
   }
   
