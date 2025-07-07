@@ -1,0 +1,31 @@
+.image-carousel-block {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.image-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  will-change: transform;
+}
+
+.image-carousel-track img {
+  width: 150px;
+  height: auto;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.image-carousel-track img.active {
+  width: 300px;
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 1;
+}
