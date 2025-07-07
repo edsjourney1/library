@@ -14,7 +14,7 @@
 
 /* Style for each button */
 .tab-two-button {
-  flex: 1 1 0; 
+  flex: 1 1 0; /* Equal width for all buttons */
   padding: 1rem;
   background: #757272;
   border: 2px solid #bbb;
@@ -61,7 +61,7 @@
   line-height: 1.6;
 }
 
-
+/* Image content column */
 .eds-image {
   flex: 1;
   text-align: center;

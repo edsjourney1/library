@@ -1,6 +1,6 @@
 export default function decorate(block) {
-  const container = block.closest('.tab-two-table-container');
-  const allBlocks = container.querySelectorAll('.tab-two-table.block');
+  const container = block.closest('.tab-using-two-table-container');
+  const allBlocks = container.querySelectorAll('.tab-using-two-table.block');
 
   if (allBlocks.length !== 2) return;
 
