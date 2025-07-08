@@ -33,7 +33,10 @@ export default function decorate(block) {
     });
 
     content.classList.add('eds-layout');
-    
+    if (!content.querySelector('.eds-image')) {
+      content.classList.add('only-text');
+    }
+
     const btn = document.createElement('button');
     btn.className = 'tab-two-button';
     btn.textContent = title.textContent.trim();
@@ -48,7 +51,6 @@ export default function decorate(block) {
     const content = e.target.tabContent;
     contentContainer.innerHTML = '';
     contentContainer.appendChild(content);
-    
 
     tabContainer.querySelectorAll('button').forEach(b => b.classList.remove('active'));
     e.target.classList.add('active');
@@ -60,7 +62,4 @@ export default function decorate(block) {
     firstButton.classList.add('active');
     contentContainer.appendChild(firstButton.tabContent);
   }
-
-  
-  
 }

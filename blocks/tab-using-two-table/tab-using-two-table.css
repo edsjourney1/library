@@ -14,7 +14,7 @@
 
 /* Style for each button */
 .tab-two-button {
-  flex: 1 1 0; /* Equal width for all buttons */
+  flex: 1 1 0;
   padding: 1rem;
   background: #757272;
   border: 2px solid #bbb;
@@ -30,17 +30,24 @@
 /* Hover and active styles */
 .tab-two-button:hover,
 .tab-two-button:active {
-  background-color: #d3d3d3 !important; /* Light grey */
+  background-color: #d3d3d3 !important;
   border-color: #999 !important;
   color: #333;
 }
-.tab-two-button.active{
+
+.tab-two-button.active {
   background-color: #d3d3d3 !important;
   border-color: #999 !important;
-  color: #333; 
+  color: #333;
 }
-  /* Content rows styling */
-#tab-two-table-content > div {
+
+/* Content container */
+#tab-two-table-content {
+  width: 100%;
+}
+
+/* Layout container */
+.eds-layout {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -51,6 +58,15 @@
   border-top: 1px solid #ddd;
   border-radius: 0px;
   margin-top: 20px;
+}
+
+/* Full-width layout when no image is present */
+.eds-layout.only-text {
+  display: block;
+}
+
+.eds-layout.only-text .eds-content {
+  width: 100%;
 }
 
 /* Text content column */
@@ -73,22 +89,5 @@
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Optional: image styling for general content */
-#tab-two-table-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Full-width text content when no image is present */
-#tab-two-table-content > .eds-layout:has(.eds-content):not(:has(.eds-image)) {
-  display: block;
-}
-
-#tab-two-table-content > .eds-layout:has(.eds-content):not(:has(.eds-image)) .eds-content {
-  width: 100%;
 }
 
