@@ -1,7 +1,7 @@
 /* Container for tab buttons */
 #tab-two-table-buttons {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap ;
   gap: 0px;
   padding: 1rem;
   background: #f0f0f0;
