@@ -67,7 +67,7 @@ export default function decorate(block) {
     });
   });
 
-  setInterval(() => rotateCarousel(1), 5000);
+  setInterval(() => rotateCarousel(1), 4000);
 
   updateActive(currentIndex);
 }
