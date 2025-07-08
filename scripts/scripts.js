@@ -12,6 +12,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import convertButtons from './customButton.js';
 
 /**
  * Builds hero block and prepends to main in a new section.
@@ -60,6 +61,7 @@ function buildAutoBlocks(main) {
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
+  convertButtons(main);//For Custom DOM to HTML 
   decorateButtons(main);
   decorateIcons(main);
   buildAutoBlocks(main);
