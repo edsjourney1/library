@@ -255,3 +255,19 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+.primary-red-color{
+  background-color: black !important;
+  color: red !important;
+
+}
+.primary-green-color{
+  background-color: black !important;
+  color: green !important;
+
+}
+.primary-yellow-color{
+  background-color: black !important;
+  color: yellow !important;
+
+}
+ 
