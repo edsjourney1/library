@@ -1,0 +1,83 @@
+/* === Carousel Container === */
+.image-carousel-block {
+  width: 100%;
+  margin: 0;
+  padding: 30px 0;
+  background-color: #f0f0f0; /* Light background */
+  text-align: center;
+}
+
+/* === Carousel Layout === */
+.image-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+
+/* === Carousel Slides === */
+.carousel-image-slide {
+  display: none;
+  width: 200px;
+  height: 150px;
+  opacity: 0;
+  transform: scale(0.6);
+  overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Focused (center) image */
+.carousel-image-slide.focused {
+  display: block;
+  width: 400px;
+  height: 300px;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* Side images (left and right) */
+.carousel-image-slide.side-left,
+.carousel-image-slide.side-right {
+  display: block;
+  width: 250px;
+  height: 180px;
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+
+/* === Image Styling === */
+.carousel-image-slide picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* === Navigation Dots === */
+.carousel-dots {
+  margin-top: 20px;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: #333;
+}
