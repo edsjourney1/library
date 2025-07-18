@@ -1,0 +1,105 @@
+/* Image Gallery Layout */
+.custom-image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 1200px;
+  
+}
+
+.custom-gallery-heading {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.custom-gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-content: center;
+}
+
+.custom-gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.custom-gallery-column picture,
+.custom-gallery-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.custom-gallery-column img:hover {
+  transform: scale(1.02);
+}
+
+/* Modal Styles */
+.custom-image-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 950px;
+  height: 650px;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+  padding: 50px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+
+.custom-image-modal img.custom-modal-img {
+  
+  max-width: calc(100% - 100px);
+  max-height: calc(100% - 100px);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  width: 700px;
+  height: 500px;
+}
+
+/* Close Button */
+.custom-image-modal .custom-close-btn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 10000;
+}
+
+/* Navigation Buttons */
+.custom-image-modal .custom-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10000;
+}
+
+.custom-image-modal .custom-prev {
+  left: 30px;
+}
+
+.custom-image-modal .custom-next {
+  right: 30px;
+}

@@ -1,0 +1,36 @@
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 1200px;
+    margin-left: 124.4px;
+    margin-right: 124.4px;
+  }
+  
+  .image-gallery-heading {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+  
+  .image-gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-content: center;
+  }
+  
+  .image-gallery-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .image-gallery-column picture,
+  .image-gallery-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
