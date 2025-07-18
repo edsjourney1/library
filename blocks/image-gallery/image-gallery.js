@@ -1,20 +1,20 @@
 export default function decorate(block) {
-  block.classList.add('image-gallery');
+  block.classList.add('image-gallery-s');
 
   const rows = Array.from(block.children);
 
   const headingRow = rows[0];
-  headingRow.classList.add('image-gallery-heading');
+  headingRow.classList.add('image-gallery-s-heading');
 
   // Create container for columns
   const container = document.createElement('div');
-  container.classList.add('image-gallery-container');
+  container.classList.add('image-gallery-s-container');
 
   const leftDiv = document.createElement('div');
-  leftDiv.classList.add('image-gallery-column');
+  leftDiv.classList.add('image-gallery-s-column');
 
   const rightDiv = document.createElement('div');
-  rightDiv.classList.add('image-gallery-column');
+  rightDiv.classList.add('image-gallery-s-column');
 
   rows.slice(1).forEach((row) => {
     const columns = Array.from(row.children);
