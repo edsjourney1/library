@@ -3,29 +3,13 @@ export default function decorate(block) {
 
   const rows = Array.from(block.children);
 
-  const headingRow = rows[0];
-  headingRow.classList.add('image-gallery-s-heading');
+  if (rows.length === 0) return;
 
-  // Create container for columns
-  const container = document.createElement('div');
-  container.classList.add('image-gallery-s-container');
-
-  const leftDiv = document.createElement('div');
-  leftDiv.classList.add('image-gallery-s-column');
-
-  const rightDiv = document.createElement('div');
-  rightDiv.classList.add('image-gallery-s-column');
+  rows[0].classList.add('image-gallery-s-heading');
 
   rows.slice(1).forEach((row) => {
     const columns = Array.from(row.children);
-    if (columns[0]) leftDiv.appendChild(columns[0]);
-    if (columns[1]) rightDiv.appendChild(columns[1]);
+    if (columns[0]) columns[0].classList.add('image-gallery-s-column');
+    if (columns[1]) columns[1].classList.add('image-gallery-s-column');
   });
-
-  container.appendChild(leftDiv);
-  container.appendChild(rightDiv);
-
-  block.innerHTML = '';
-  block.appendChild(headingRow); // Keep heading row
-  block.appendChild(container);
 }

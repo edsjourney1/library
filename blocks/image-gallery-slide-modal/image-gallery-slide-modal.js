@@ -2,32 +2,17 @@ export default function decorate(block) {
   block.classList.add('custom-image-gallery');
 
   const rows = Array.from(block.children);
-  const headingRow = rows[0];
-  headingRow.classList.add('custom-gallery-heading');
+  if (rows.length === 0) return;
 
-  const container = document.createElement('div');
-  container.classList.add('custom-gallery-container');
-
-  const leftDiv = document.createElement('div');
-  leftDiv.classList.add('custom-gallery-column');
-
-  const rightDiv = document.createElement('div');
-  rightDiv.classList.add('custom-gallery-column');
+  rows[0].classList.add('custom-gallery-heading');
 
   rows.slice(1).forEach((row) => {
     const columns = Array.from(row.children);
-    if (columns[0]) leftDiv.appendChild(columns[0]);
-    if (columns[1]) rightDiv.appendChild(columns[1]);
+    if (columns[0]) columns[0].classList.add('custom-gallery-column');
+    if (columns[1]) columns[1].classList.add('custom-gallery-column');
   });
 
-  container.appendChild(leftDiv);
-  container.appendChild(rightDiv);
-
-  block.innerHTML = '';
-  block.appendChild(headingRow);
-  block.appendChild(container);
-
-  // Create modal
+  // Create modal once, outside block
   const modal = document.createElement('div');
   modal.className = 'custom-image-modal';
   modal.innerHTML = `

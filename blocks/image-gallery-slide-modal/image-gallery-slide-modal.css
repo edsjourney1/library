@@ -1,12 +1,12 @@
-/* Image Gallery Layout */
+/* Gallery Container */
 .custom-image-gallery {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 1200px;
-  
 }
 
+/* Heading Row */
 .custom-gallery-heading {
   font-size: 24px;
   font-weight: 600;
@@ -14,19 +14,22 @@
   margin-bottom: 4px;
 }
 
-.custom-gallery-container {
+/* Each row in the gallery */
+.custom-image-gallery > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   align-content: center;
 }
 
+/* Columns (applied to individual images or wrappers) */
 .custom-gallery-column {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+/* Image Styling */
 .custom-gallery-column picture,
 .custom-gallery-column img {
   width: 100%;
@@ -49,7 +52,7 @@
   left: 50%;
   width: 950px;
   height: 650px;
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -59,12 +62,12 @@
   transform: translate(-50%, -50%);
 }
 
+/* Modal Image */
 .custom-image-modal img.custom-modal-img {
-  
   max-width: calc(100% - 100px);
   max-height: calc(100% - 100px);
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   width: 700px;
   height: 500px;
 }
