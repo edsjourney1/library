@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .image-gallery-s-heading {
@@ -30,4 +33,18 @@
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .image-gallery-s > div {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery-s-heading {
+    font-size: 20px;
+    text-align: center;
+  }
 }
