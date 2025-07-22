@@ -1,20 +1,21 @@
 /* Container for tab buttons */
 #tab-two-table-buttons {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 0px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 8px;
   padding: 1rem;
   background: #f0f0f0;
   border: 1px solid #ddd;
   border-radius: 0px;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: auto; /* Scroll if buttons overflow */
 }
 
 /* Style for each button */
 .tab-two-button {
-  flex: 1 1 0;
+  flex: 1 1 auto;
+  min-width: 120px;
   padding: 1rem;
   background: #757272;
   border: 2px solid #bbb;
@@ -29,12 +30,7 @@
 
 /* Hover and active styles */
 .tab-two-button:hover,
-.tab-two-button:active {
-  background-color: #d3d3d3 !important;
-  border-color: #999 !important;
-  color: #333;
-}
-
+.tab-two-button:active,
 .tab-two-button.active {
   background-color: #d3d3d3 !important;
   border-color: #999 !important;
@@ -71,7 +67,7 @@
 
 /* Text content column */
 .eds-content {
-  flex: 1;
+  flex: 1 1 50%;
   font-size: 1.1rem;
   color: #333;
   line-height: 1.6;
@@ -80,7 +76,7 @@
 
 /* Image content column */
 .eds-image {
-  flex: 1;
+  flex: 1 1 50%;
   text-align: center;
 }
 
@@ -92,3 +88,31 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #tab-two-table-buttons {
+    flex-direction: column;
+    gap: 12px;
+    overflow-x: unset;
+  }
+
+  .tab-two-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .eds-layout {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .eds-content,
+  .eds-image {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .eds-content {
+    font-size: 1rem;
+  }
+}
