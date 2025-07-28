@@ -1,0 +1,40 @@
+
+
+  .progress-bar-title h3 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    font-weight: 400 !important;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+  }
+  
+  .progress-bar-row {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .progress-bar-label {
+    display: block;
+    margin: 15px 0;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 4px;
+    color: #555;
+  }
+  
+  .progress-bar-track {
+    background-color: #e0e0e0;
+    height: 28px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: gray;
+    transition: width 0.3s ease-in-out;
+  }
+  

@@ -11,12 +11,10 @@ export default function decorate(block) {
       cols.forEach((col) => {
         const picture = col.querySelector('picture');
         if (picture) {
-          // This column contains the image
           col.classList.add('image-text-image-wrapper');
           const img = picture.querySelector('img');
           if (img) img.classList.add('image-text-image');
         } else {
-          // This column contains the content
           col.classList.add('image-text-content-wrapper');
   
           const heading = col.querySelector('h3');
